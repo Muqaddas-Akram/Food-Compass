@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "food-compass",
+    "name": "Food Compass",
     "slug": "food-compass",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFF9F0"
     },
     "ios": {
       "supportsTablet": true
