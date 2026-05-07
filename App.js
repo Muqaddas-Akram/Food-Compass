@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { DatabaseProvider } from './src/context/DatabaseContext';
@@ -16,7 +16,7 @@ import CookingModeScreen from './src/screens/CookingModeScreen';
 import FavoritesScreen from './src/screens/FavoritesScreen';
 import SearchScreen from './src/screens/SearchScreen';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function HomeStack() {
@@ -26,8 +26,6 @@ function HomeStack() {
         headerStyle: { backgroundColor: Colors.white },
         headerTintColor: Colors.primary,
         headerTitleStyle: { fontWeight: '700', color: Colors.textPrimary },
-        headerShadowVisible: false,
-        headerBackTitleVisible: false,
       }}
     >
       <Stack.Screen
@@ -54,7 +52,7 @@ function HomeStack() {
           title: '',
           headerStyle: { backgroundColor: Colors.white },
           headerTintColor: Colors.primary,
-          presentation: 'modal',
+          headerTransparent: true,
         }}
       />
     </Stack.Navigator>
